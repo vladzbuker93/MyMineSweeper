@@ -6,75 +6,91 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/modes">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="@string/tv_choose_mode"
             android:textSize="30sp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginLeft="10dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageButton
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button_beginner_mode"
-                android:background="@drawable/beginner_button"/>
-            <ImageButton
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_beginner_mode"
+                    android:background="@drawable/beginner_button"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_advanced_mode"
+                    android:background="@drawable/advanced_button"/>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button_advanced_mode"
-                android:background="@drawable/advanced_button"/>
-            <ImageButton
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_mode_beginner"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="17dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_mode_advanced"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="31dp"/>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button_expert_mode"
-                android:background="@drawable/expert_button"/>
-            <ImageButton
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_expert_mode"
+                    android:background="@drawable/expert_button"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_custom_mode"
+                    android:background="@drawable/custom_button"/>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button_custom_mode"
-                android:background="@drawable/custom_button"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_mode_beginner"
-                android:textStyle="bold"
-                android:layout_marginLeft="18dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_mode_advanced"
-                android:textStyle="bold"
-                android:layout_marginLeft="31dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_mode_expert"
-                android:textStyle="bold"
-                android:layout_marginLeft="39dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_mode_custom"
-                android:textStyle="bold"
-                android:layout_marginLeft="47dp"/>
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_mode_expert"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_mode_custom"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="48dp"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:orientation="vertical">
+        android:layout_gravity="top|left"
+        android:orientation="vertical"
+        android:id="@+id/exit_layout">
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
