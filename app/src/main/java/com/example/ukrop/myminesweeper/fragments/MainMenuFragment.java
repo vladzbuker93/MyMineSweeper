@@ -2,7 +2,6 @@ package com.example.ukrop.myminesweeper.fragments;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -17,6 +16,7 @@ public class MainMenuFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        MainActivity.setIsInMainMenu(true);
         View view = inflater.inflate(R.layout.main_fragment, container, false);
 
         ImageButton newGameBtn = (ImageButton) view.findViewById(R.id.btn_new_game);

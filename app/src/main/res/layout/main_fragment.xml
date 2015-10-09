@@ -24,13 +24,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_new_game"
-                android:background="@drawable/start_game"/>
+                android:background="@drawable/stl_btn_start_game"/>
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_stats"
-                android:background="@drawable/stats_button"/>
+                android:background="@drawable/stl_btn_stats"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -68,9 +68,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_settings"
-                android:background="@drawable/settings_button"
                 android:layout_gravity="center_horizontal|bottom"
-                />
+                android:background="@drawable/stl_btn_settings"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.ukrop.myminesweeper.MainActivity;
 import com.example.ukrop.myminesweeper.R;
 import com.example.ukrop.myminesweeper.game_engine.GameModes;
 
@@ -24,6 +25,7 @@ public class ModeChoosierFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.mode_choosier_layout, container, false);
+        MainActivity.setIsInMainMenu(false);
         final FragmentManager manager = getFragmentManager();
 /**
         TextView beginner = (TextView) view.findViewById(R.id.beginner_tv);
