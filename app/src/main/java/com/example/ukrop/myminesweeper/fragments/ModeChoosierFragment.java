@@ -15,6 +15,11 @@ import com.example.ukrop.myminesweeper.game_engine.GameModes;
 
 public class ModeChoosierFragment extends Fragment {
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
