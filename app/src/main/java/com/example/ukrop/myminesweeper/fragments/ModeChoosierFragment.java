@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.ukrop.myminesweeper.MainActivity;
@@ -24,52 +25,60 @@ public class ModeChoosierFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.mode_choosier_layout, container, false);
+        final View view = inflater.inflate(R.layout.mode_choosier_layout, container, false);
         MainActivity.setIsInMainMenu(false);
         final FragmentManager manager = getFragmentManager();
-/**
-        TextView beginner = (TextView) view.findViewById(R.id.beginner_tv);
+
+        ImageButton beginner = (ImageButton) view.findViewById(R.id.button_beginner_mode);
         beginner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 manager.beginTransaction()
-                        .replace(R.id.field_layout,
+                        .replace(R.id.main_frame_layout,
                                 FieldFragment.newInstance
-                                        (GameModes.beginner_tiles,
-                                                GameModes.beginner_bombs,
-                                                GameModes.row_count_beginner))
+                                        (GameModes.beinner_rows,
+                                                GameModes.beginner_cols,
+                                                GameModes.beginner_bombs))
                         .commit();
             }
         });
 
-        TextView advanced = (TextView) view.findViewById(R.id.advanced_tv);
+        ImageButton advanced = (ImageButton) view.findViewById(R.id.button_advanced_mode);
         advanced.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 manager.beginTransaction()
-                        .replace(R.id.field_layout,
+                        .replace(R.id.main_frame_layout,
                                 FieldFragment.newInstance
-                                    (GameModes.advanced_tiles,
-                                            GameModes.advanced_bombs,
-                                            GameModes.row_count_advanced))
+                                        (GameModes.advanced_rows,
+                                                GameModes.advanced_cols,
+                                                GameModes.advanced_bombs))
                         .commit();
             }
         });
 
-        TextView expert = (TextView) view.findViewById(R.id.expert_tv);
+        ImageButton expert = (ImageButton) view.findViewById(R.id.button_expert_mode);
         expert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 manager.beginTransaction()
-                        .replace(R.id.field_layout,
+                        .replace(R.id.main_frame_layout,
                                 FieldFragment.newInstance
-                                    (GameModes.expert_tiles,
-                                            GameModes.expert_bombs,
-                                            GameModes.row_count_expert))
+                                    (GameModes.expert_rows,
+                                            GameModes.expert_cols,
+                                            GameModes.expert_bombs))
                         .commit();
             }
         });
-*/
+
+        ImageButton custom = (ImageButton) view.findViewById(R.id.button_custom_mode);
+        custom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         return view;
     }
 }
