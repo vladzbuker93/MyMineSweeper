@@ -8,21 +8,38 @@ public class GameModes {
     /**
      * Beginner Mode
      */
-    public static final int beginner_tiles = 81;
-    public static final int beginner_bombs = 8;
-    public static final int row_count_beginner = (int) Math.sqrt((double) 81);
+    public static final int beinner_rows = 7;
+    public static final int beginner_cols = 7;
+    public static final int beginner_bombs = 6;
 
     /**
      * Advanced Mode
      */
-    public static final int advanced_tiles = 256;
-    public static final int advanced_bombs = 40;
-    public static final int row_count_advanced = (int) Math.sqrt((double) 256);
+    public static final int advanced_rows = 9;
+    public static final int advanced_cols = 9;
+    public static final int advanced_bombs = 20;
 
     /**
      * Expert Mode
      */
-    public static final int expert_tiles = 483;
-    public static final int expert_bombs = 100;
-    public static final int row_count_expert = (int) Math.sqrt((double) 480);
+    public static final int expert_rows = 15;
+    public static final int expert_cols = 15;
+    public static final int expert_bombs = 35;
+
+    /**
+     * Custom Mode
+     */
+    public static final int custom_rows = 0;
+    public static final int custom_cols = 0;
+    public static final int custom_bombs= 0;
+
+    public int setCustomRows(int rows){
+        return rows;
+    }
+    public int setCustomCols(int cols){
+        return cols;
+    }
+    public int setCustomBombs(int bombs){
+        return bombs;
+    }
 }

@@ -13,4 +13,12 @@
     <string name="tv_mode_expert">Expert</string>
     <string name="tv_mode_custom">Custom</string>
     <string name="tv_beck_to_main">Main Menu</string>
+
+    <string name="et_hint_rows">Number of rows</string>
+    <string name="et_hint_cols">Number of columns</string>
+    <string name="et_hint_bombs">Number of bombs</string>
+    
+    <string name="btn_dialog_cancel">Cancel</string>
+    <string name="btn_dialog_ok">Okay</string>
+    <string name="dialog_custom_title">Choose game parameters</string>
 </resources>

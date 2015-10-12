@@ -22,16 +22,16 @@ public class FieldFragment extends Fragment{
 
 
     private static final String TAG = "FieldFragment";
-    private static final String TILES = "tiles";
+    private static final String ROWS = "tiles";
     private static final String BOMBS = "bombs";
-    private static final String ROW_COUNT = "row_count";
+    private static final String COLS = "cols";
 
-    public static FieldFragment newInstance(int tiles, int bombs, int rowCount){
+    public static FieldFragment newInstance(int rows, int cols, int bombs){
         Bundle args = new Bundle();
 
-        args.putInt(TILES, tiles);
+        args.putInt(ROWS, rows);
         args.putInt(BOMBS, bombs);
-        args.putInt(ROW_COUNT, rowCount);
+        args.putInt(COLS, cols);
 
         FieldFragment fragment = new FieldFragment();
         fragment.setArguments(args);
@@ -44,13 +44,15 @@ public class FieldFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.field_layout, container, false);
 
-        mCells = new CellLab(getArguments().getInt(BOMBS), getArguments().getInt(ROW_COUNT));
+        mCells = new CellLab(getArguments().getInt(BOMBS)
+                , getArguments().getInt(ROWS)
+                , getArguments().getInt(COLS));
 
         mGridView = (GridView) view.findViewById(R.id.minefield_view);
 
         mMinefieldAdapter = new MinefieldAdapter(mCells, getActivity());
 
-        mGridView.setNumColumns(getArguments().getInt(ROW_COUNT));
+        mGridView.setNumColumns(getArguments().getInt(COLS));
         mGridView.setAdapter(mMinefieldAdapter);
         mGridView.setStretchMode(GridView.NO_STRETCH);
 

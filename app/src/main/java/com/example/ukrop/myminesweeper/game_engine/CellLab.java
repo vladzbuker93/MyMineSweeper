@@ -16,12 +16,12 @@ public class CellLab {
 
     private static final String TAG = "CellLab";
 
-    public CellLab(int bombs, int rows){
-        mCells = new Cell[rows][rows];
+    public CellLab(int bombs, int rows, int cols){
+        mCells = new Cell[rows][cols];
 
         this.mBombs = bombs;
         this.mRows = rows;
-        this.mCols = rows;
+        this.mCols = cols;
 
         initField();
     }
@@ -83,7 +83,7 @@ public class CellLab {
      * Method for showing minefield in log
      * */
     private void cellLabLog(){
-        ArrayList<Integer> logArray = new ArrayList<Integer>();
+        ArrayList<Integer> logArray = new ArrayList<>();
         for (int i = 0; i < mRows;i++){
             for (int j = 0; j < mCols;j++){
                 logArray.add(mCells[i][j].getNeighbourSize());

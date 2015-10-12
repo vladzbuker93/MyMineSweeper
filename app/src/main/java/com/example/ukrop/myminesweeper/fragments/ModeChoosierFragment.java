@@ -1,5 +1,6 @@
 package com.example.ukrop.myminesweeper.fragments;
 
+import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
@@ -75,7 +76,8 @@ public class ModeChoosierFragment extends Fragment {
         custom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                DialogFragment dialog = new CustomModeDialogFragment();
+                dialog.show(getFragmentManager(), "CUSTOM_MODE_DIALOG");
             }
         });
 
